@@ -6,3 +6,6 @@ It is meant to be used in combination with ACE mod due to the changes it applies
 It is calibrated to down a Russian RHS unit with ~2 bullets.
 
 It adds PMAG and PULLER type magazines.
+
+## Steam Workshop Link
+https://steamcommunity.com/sharedfiles/filedetails/?id=3558169783
