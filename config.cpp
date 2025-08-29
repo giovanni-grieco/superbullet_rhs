@@ -5,50 +5,40 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Weapons_F","Superbullet"};
-        magazines[] = {"Super_30Rnd_556_AP"};
-        ammo[] = {"B_556x45_Super"};
-    };
-};
-
-class CfgAmmo
-{
-    class B_556x45_Ball; // Base game ammo
-
-    class B_556x45_Super : B_556x45_Ball
-    {
-        caliber = 9;
-        hit = 4;
+        requiredAddons[] = {"A3_Weapons_F","Superbullet","rhsusf_weapons","rhsusf_c_weapons"};
+        magazines[] = {"30Rnd_556x45_Super_PMAG", "30Rnd_556x45_Super_Puller"};
     };
 };
 
 class CfgMagazines
-{
-    class 30Rnd_556x45_Stanag; // Base class
+{   
+    //PMAG
+    class rhs_mag_30Rnd_556x45_M855A1_PMAG;
 
-    class 30Rnd_556x45_Super : 30Rnd_556x45_Stanag
+    class 30Rnd_556x45_Super_PMAG : rhs_mag_30Rnd_556x45_M855A1_PMAG
     {
         author = "Henderson";
-        displayName = "5.56mm 30Rnd Super Mag";
+        displayName = "5.56mm 30Rnd Super PMAG";
         ammo = "B_556x45_Super";
-        descriptionShort = "Super Armor-Piercing Rounds";
+        descriptionShort = "Super Armor-Piercing Rounds PMAG";
     };
-
-    /*class 30Rnd_556x45_Super_Emag : 30Rnd_556x45_Stanag
+    
+    //Puller
+    class rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull;
+    
+    class 30Rnd_556x45_Super_Puller : rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull
     {
         author = "Henderson";
-        displayName = "5.56mm 30Rnd Super EMAG";
+        displayName = "5.56mm 30Rnd Super Puller";
         ammo = "B_556x45_Super";
-        count = 30;
-        initSpeed = 930;
-        descriptionShort = "Custom Armor-Piercing Rounds";
-    };*/
+        descriptionShort = "Super Armor-Piercing Rounds Puller";
+    };
 };
 
 class CfgMagazineWells
 {
     class STANAG_556x45
     {
-        MyMags[] = {"30Rnd_556x45_Super"};
+        Superbullet_RHS_Mags[] = {"30Rnd_556x45_Super_PMAG", "30Rnd_556x45_Super_Puller"};
     };
 };
